@@ -10,6 +10,31 @@
 间、结束时间、周转时间、带权周转时间，以及这些作业的
 平均周转时间和带权平均周转时间。
 ### 实验要求
+- 运行与报告编译
+
+#### 运行代码
+
+环境：Rust（建议 1.70+）。进入 `lab1` 目录后执行：
+
+```bash
+cargo run --quiet
+```
+
+程序将输出 FCFS/SJF/HRRN 在单道与双道下的调度结果及平均（带权）周转时间。
+
+#### 编译报告
+
+报告位于 `report/` 目录，采用 XeLaTeX 编译，建议顺序：
+
+```bash
+cd report
+xelatex main.tex
+bibtex main
+xelatex main.tex
+xelatex main.tex
+```
+
+编译成功后生成 `main.pdf`。
 - 1）分别用先来先服务调度算法（FCFS）、短作业优先调度
 算法（SJF）、响应比高者优先调度算法（HRRN），求出批作
 业的平均周转时间和带权平均周转时间；
